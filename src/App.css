@@ -1,33 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Rajdhani:600');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: url("https://i.imgur.com/ybtKvQ2.jpg");
+}
+
+.header-image {
+  background-image: url("https://i.imgur.com/Io3QJqs.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-position: 70% 30%;
+}
+
+.nav {
+  height: 10vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.body {
+  width: 85%;
+  align-self: center;
+  /* background: #ddd; */
+  /* background-image: url("https://i.imgur.com/ybtKvQ2.jpg"); */
+  background-size: cover;
+  background-position: center;
+}
+
+.body-cover {
+
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+
+.image {
+  height: 500px;
+  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
+  background-size: cover;
+  background-position:center;
+}
+
+#omakase-image {
+  background-image: url("https://i.imgur.com/vbV5Fms.png");
+  justify-self: end;
+}
+
+#about-image {
+  background-image: url("https://i.imgur.com/WZA5X3F.png");
+  justify-self: start;
+}
+
+#press-image {
+  background-image: url("https://i.imgur.com/voq1A4U.jpg");
+  justify-self: start;
+}
+
+#press-text {
+  justify-self: center;
+}
+
+.text-container {
+  width: 70%;
+  text-align: left;
+  align-self: center;
+}
+
+#about-text {
+  justify-self: center;
+}
+
+.backdrop {
+  /* background-image: url("https://i.imgur.com/ybtKvQ2.jpg"); */
+  background: rgba(242, 230, 214, .5);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
+}
+
+.locations {
+  margin-top: 200px;
+}
+
+.city-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.city-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.restaurant-container {
+  height: 812px;
+  margin-top: 35px;
+  width: 100%;
+}
+
+#restaurant-container-one {
+  justify-self: start;
+}
+
+#restaurant-container-two {
+  justify-self: end;
+}
+
+.restaurant-image-one {
+  min-width: 300px;
+  /* width: 100%; */
+  /* max-width: 513px; */
+  width: 513px;
+  height: 406px;
+  background-image: url("https://i.imgur.com/Io3QJqs.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.restaurant-image-two {
+  min-width: 300px;
+  /* width: 100%; */
+  /* max-width: 513px; */
+  width: 513px;
+  height: 406px;
+  background-size: cover;
+  background-position: center;
+}
+
+#new-york-one {
+  background-image: url("https://i.imgur.com/StkJLnj.jpg");
+}
+
+#new-york-two {
+  background-image: url("https://i.imgur.com/bI5UyMn.jpg");
+}
+
+.restaurant-text {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 75%;
+}
+
+.restaurant-text h2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.hours {
+  text-align: left;
+  justify-self: end;
+}
+
+#press-text {
+  align-self: end;
+}
+
+#press-description p {
+  margin: 0;
+}
+
+.footer {
+  min-height: 567px;
+  height: auto;
+  background: black;
+  margin-top: 100px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.city-list {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 1230px) {
+  .city-container {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  #restaurant-container-one {
+    justify-self: center;
+  }
+
+  #restaurant-container-two {
+    justify-self: center;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .city-container {
+    grid-template-columns: 1fr;
   }
 }
