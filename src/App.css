@@ -67,7 +67,7 @@
   align-self: center;
   display: none;
   position: relative;
-  right: 0;
+  left: 50px;
 }
 
 .hamburger:hover {
