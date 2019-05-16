@@ -27,7 +27,8 @@ class App extends Component {
 
 
     this.state = {
-      currentCity: 'new-york'
+      currentCity: 'new-york',
+      showClass: false,
     }
   }
 
@@ -40,11 +41,11 @@ class App extends Component {
   }
 
   scrollContact() {
-    this.contact.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.contact.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   scrollLocations() {
-    this.locations.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    this.locations.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   scrollPress() {
@@ -56,8 +57,13 @@ class App extends Component {
   }
 
   scrollHeader() {
-    this.header.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.header.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
+
+  changeClass() {
+    
+  }
+
   render() {
     return (
       <div className="App">

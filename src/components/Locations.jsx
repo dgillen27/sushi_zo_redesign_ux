@@ -6,11 +6,11 @@ const Locations = (props) => {
     <div className="locations" ref={props.locations}>
       <h1>LOCATIONS</h1>
       <div className="city-list">
-        <p>New York</p>
-        <p>Los Angeles</p>
-        <p>Tokyo</p>
-        <p>Bangkok</p>
-        <p>Hong Kong</p>
+        <div className="id-city"><p className="selected">New York</p><div className="triangle"></div></div>
+        <div className="id-city"><p>Los Angeles</p><div className="triangle"></div></div>
+        <div className="id-city"><p>Tokyo</p><div className="triangle"></div></div>
+        <div className="id-city"><p>Bangkok</p><div className="triangle"></div></div>
+        <div className="id-city"><p>Hong Kong</p><div className="triangle"></div></div>
       </div>
       <div className='city-container' id={currentCity}>
         <div className="restaurant-container" id="restaurant-container-one">
@@ -44,7 +44,7 @@ const Locations = (props) => {
           <div className="restaurant-image-two" id={currentCity + "-two"}></div>
           { currentCity === 'new-york'&&
           <div className="restaurant-text" id="restaurant-text-two">
-            <h2>Sushi Zo Honare (Midtown NY )</h2>
+            <h2>Sushi Zo Hanare (Midtown NY )</h2>
             <div className="contact-info">
               <p>Address</p>
               <p>88 W. 3rd Street</p>

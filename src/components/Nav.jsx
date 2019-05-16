@@ -13,7 +13,7 @@ const Nav = (props) => {
         <h2 onClick={props.scrollPress}>PRESS</h2>
         <div className="button" id="nav-book" onClick={props.scrollBook}>BOOK</div>
       </div>
-      <HamburgerMenu />
+      <HamburgerMenu {...props}/>
     </div>
   )
 }
