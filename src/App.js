@@ -3,7 +3,8 @@ import './App.css';
 import Header from './components/Header'
 import Nav from './components/Nav';
 import Body from './components/Body';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Backdrop from './components/Backdrop'
 
 class App extends Component {
   constructor() {
@@ -15,12 +16,14 @@ class App extends Component {
     this.locations = React.createRef();
     this.press = React.createRef();
     this.book = React.createRef();
+    this.header = React.createRef();
 
     this.scrollOmakase = this.scrollOmakase.bind(this);
     this.scrollAbout = this.scrollAbout.bind(this);
     this.scrollContact = this.scrollContact.bind(this);
     this.scrollLocations = this.scrollLocations.bind(this);
     this.scrollPress = this.scrollPress.bind(this);
+    this.scrollHeader = this.scrollHeader.bind(this)
 
 
     this.state = {
@@ -29,11 +32,11 @@ class App extends Component {
   }
 
   scrollOmakase() {
-    this.omakase.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.omakase.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   scrollAbout() {
-    this.about.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.about.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   scrollContact() {
@@ -41,26 +44,31 @@ class App extends Component {
   }
 
   scrollLocations() {
-    this.locations.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.locations.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   scrollPress() {
-    this.press.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.press.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   scrollBook() {
-    this.book.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.locations.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  scrollHeader() {
+    this.header.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header header={this.header}/>
         <Nav
           scrollOmakase={this.scrollOmakase}
           scrollAbout={this.scrollAbout}
           scrollContact={this.scrollContact}
           scrollLocations={this.scrollLocations}
-          scrollPress={this.scrollPress}/>
+          scrollPress={this.scrollPress}
+          scrollHeader={this.scrollHeader}/>
         {/*<Backdrop />*/}
         <Body
           currentCity={this.state.currentCity}

@@ -4,6 +4,7 @@ import Locations from './Locations'
 const Body = (props) => {
   return (
     <div className="body">
+    <div className="backdrop"></div>
       <div className="content" id="omakase" ref={props.omakase}>
         <div className="text-container" id="omakase-text">
           <h2>o&#183;ma&#183;ka&#183;se</h2>
@@ -30,7 +31,6 @@ const Body = (props) => {
       </div>
       <Locations {...props}/>
       <div className="content" id="press" ref={props.press}>
-        <div className="image" id="press-image"></div>
           <div className="text-container" id="press-text">
             <h2>Press</h2>
             <div className="description" id="press-description">
@@ -55,8 +55,9 @@ const Body = (props) => {
               <p>Saturday Section Front Times</p>
             </div>
           </div>
+          <div className="image" id="press-image"></div>
         </div>
-    </div>
+      </div>
   )
 }
 

@@ -37,7 +37,7 @@ const Locations = (props) => {
               <p>Reservations Only</p>
             </div>
           </div>}
-          <button type="button">Book</button>
+          <div className="button">BOOK</div>
         </div>
 
         <div className="restaurant-container" id="restaurant-container-two">
@@ -64,7 +64,7 @@ const Locations = (props) => {
               <p>Reservations Only</p>
             </div>
           </div>}
-          <button className="">Book</button>
+          <div className="button">BOOK</div>
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <div className="header-image">
+    <div className="header-image" ref={props.header}>
 
     </div>
   )

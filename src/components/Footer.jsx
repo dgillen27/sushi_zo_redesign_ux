@@ -4,7 +4,7 @@ const Footer = (props) => {
   return (
     <div className="footer" ref={props.contact}>
       <h2>CONTACT US</h2>
-      <div className="city-list">
+      <div className="contact-list">
         <div className="contact-city">
           <h3>New York</h3>
           <p>Sushi Zo NoHo</p>
@@ -33,7 +33,7 @@ const Footer = (props) => {
           <p>sushizotokyo.com</p>
         </div>
         <div className="contact-city">
-          <h3>Bankok</h3>
+          <h3>Bangkok</h3>
           <p>Sushi Zo Bangkok</p>
           <p>+662-168-8490</p>
           <p>zobkk@sushizo.us</p>
@@ -45,6 +45,9 @@ const Footer = (props) => {
           <p>+852-2884-0114</p>
           <p>management@sushizo.us</p>
         </div>
+      </div>
+      <div>
+        <p>&#169; Zo 2019 Corporation. All Rights Reserved</p>
       </div>
     </div>
   )

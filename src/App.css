@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Rajdhani:600');
 
+:root {
+  --red: rgb(204, 0, 0);
+}
+
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .App {
@@ -9,27 +13,75 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url("https://i.imgur.com/ybtKvQ2.jpg");
+  /* background-image: url("https://i.imgur.com/ybtKvQ2.jpg"); */
 }
 
 .header-image {
   background-image: url("https://i.imgur.com/Io3QJqs.jpg");
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-position: 70% 30%;
 }
 
 .nav {
+  min-height: 78px;
   height: 10vh;
   width: 100vw;
   background-color: black;
   color: white;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-items: center;
+  /* justify-content: space-around; */
+  /* align-items: center; */
   position: sticky;
   top: 0;
 }
+
+.nav-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  /* display: none; */
+}
+
+.nav h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.nav h2:hover {
+  cursor: pointer;
+}
+
+.hamburger {
+  height: 70px;
+  width: 70px;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  display: none;
+  position: relative;
+  right: 0;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 
 .body {
   width: 85%;
@@ -38,6 +90,11 @@
   /* background-image: url("https://i.imgur.com/ybtKvQ2.jpg"); */
   background-size: cover;
   background-position: center;
+}
+
+.caligraphy {
+  display: flex;
+  justify-content: center;
 }
 
 .body-cover {
@@ -71,7 +128,7 @@
 
 #press-image {
   background-image: url("https://i.imgur.com/voq1A4U.jpg");
-  justify-self: start;
+  justify-self: end;
 }
 
 #press-text {
@@ -84,13 +141,29 @@
   align-self: center;
 }
 
+.text-container h2 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 44px;
+}
+
+.text-container p {
+  font-family: 'Open sans', sans-serif;
+  /* font-size: 18px; */
+}
+
 #about-text {
   justify-self: center;
+  /* align-self: end; */
+}
+
+#about-text p {
+  margin-bottom: 0;
 }
 
 .backdrop {
-  /* background-image: url("https://i.imgur.com/ybtKvQ2.jpg"); */
-  background: rgba(242, 230, 214, .5);
+  background-image: url("https://i.imgur.com/ybtKvQ2.jpg");
+  opacity: .1;
+  /* background: rgba(242, 230, 214, .5); */
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -98,17 +171,35 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -5;
+  z-index: -1;
 }
 
 .locations {
   margin-top: 200px;
+  text-align: left;
 }
 
 .city-list {
   display: flex;
+  flex-wrap: wrap;
+  height: auto;
   justify-content: space-between;
-  width: 100%;
+}
+
+.city-list p {
+  font-size: 20px;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: left;
+  justify-items: center;
+  width: 90%;
+}
+
+.contact-city {
+  width: 90%;
 }
 
 .city-container {
@@ -119,7 +210,36 @@
 .restaurant-container {
   height: 812px;
   margin-top: 35px;
+  min-width: 300px;
   width: 100%;
+  max-width: 513px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button {
+  align-self: center;
+  min-width: 50px;
+  width: 25%;
+  max-width: 100px;
+  color: var(--red);
+  border-radius: 50px;
+  border: 2px solid var(--red);
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+#nav-book {
+  font-size: 28px;
+  width: 100%;
+
 }
 
 #restaurant-container-one {
@@ -131,10 +251,9 @@
 }
 
 .restaurant-image-one {
-  min-width: 300px;
-  /* width: 100%; */
-  /* max-width: 513px; */
-  width: 513px;
+  /* min-width: 300px; */
+  width: 100%;
+  max-width: 513px;
   height: 406px;
   background-image: url("https://i.imgur.com/Io3QJqs.jpg");
   background-size: cover;
@@ -142,10 +261,9 @@
 }
 
 .restaurant-image-two {
-  min-width: 300px;
-  /* width: 100%; */
-  /* max-width: 513px; */
-  width: 513px;
+  /* min-width: 300px; */
+  width: 100%;
+  max-width: 513px;
   height: 406px;
   background-size: cover;
   background-position: center;
@@ -162,7 +280,6 @@
 .restaurant-text {
   display: grid;
   grid-template-columns: 50% 50%;
-  width: 75%;
 }
 
 .restaurant-text h2 {
@@ -180,7 +297,18 @@
 }
 
 #press-text {
-  align-self: end;
+  align-self: start;
+  justify-self: start;
+  height: 100%;
+  max-height: 500px;
+}
+
+#press h2 {
+  margin-top: 0;
+}
+
+#press-description {
+  height: 100%;
 }
 
 #press-description p {
@@ -193,12 +321,16 @@
   background: black;
   margin-top: 100px;
   color: white;
+  display: grid;
+  justify-items: center;
 }
 
-.city-list {
-  display: flex;
-  justify-content: space-around;
-  text-align: left;
+.footer h2 {
+  align-self: center;
+}
+
+.nav img {
+  height: 10vh;
 }
 
 @media only screen and (max-width: 1230px) {
@@ -213,14 +345,60 @@
   #restaurant-container-two {
     justify-self: center;
   }
+
+  .restaurant-container {
+    min-width: 300px;
+    width: 100%;
+    max-width: 513px;
+  }
+
+  .nav-content {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* .restaurant-image-one {
+    min-width: 300px;
+    width: 100%;
+  } */
 }
 
 @media only screen and (max-width: 760px) {
+  .city-list {
+    flex-direction: column;
+  }
+
   .content {
     grid-template-columns: 1fr;
   }
 
-  .city-container {
-    grid-template-columns: 1fr;
+  #about-image {
+    grid-row-start: 2;
+    justify-self: center;
+  }
+
+  #omakase-image {
+    justify-self: center;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
+  #about-text p {
+    margin-bottom: 1em;
+  }
+
+  #press-image {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .body {
+    width: 98%;
   }
 }
