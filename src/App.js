@@ -23,11 +23,12 @@ class App extends Component {
     this.scrollContact = this.scrollContact.bind(this);
     this.scrollLocations = this.scrollLocations.bind(this);
     this.scrollPress = this.scrollPress.bind(this);
-    this.scrollHeader = this.scrollHeader.bind(this)
+    this.scrollHeader = this.scrollHeader.bind(this);
+    this.selectCity = this.selectCity.bind(this);
 
 
     this.state = {
-      currentCity: 'new-york',
+      currentCity: 'ny',
       showClass: false,
     }
   }
@@ -60,8 +61,14 @@ class App extends Component {
     this.header.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
 
-  changeClass() {
-    
+  changeClass(ev) {
+    ev.prevenetDefault();
+  }
+
+  selectCity(value) {
+    this.setState({
+      currentCity: value
+    })
   }
 
   render() {
@@ -82,7 +89,8 @@ class App extends Component {
           about={this.about}
           contact={this.contact}
           locations={this.locations}
-          press={this.press}/>
+          press={this.press}
+          selectCity={this.selectCity}/>
         <Footer
           contact={this.contact}/>
       </div>

@@ -49,6 +49,8 @@ const Body = (props) => {
               <p>A Conversation with Sushi Chef Keizo Seki</p>
               <p>and Architect Kulapat Yantrasast</p>
               <p>at New Canaan's Glass House</p>
+              <a target="_blank" href="https://www.ctbites.com/blog/2014/8/21/food-architecture-a-conversation-with-sushi-chef-keizo-seki.html">Read More</a>
+              <br/>
               <br/>
               <p>2013</p>
               <p>Los Angeles Times</p>

@@ -133,7 +133,9 @@
 
 #press-text {
   justify-self: center;
+  overflow-y: scroll;
 }
+
 
 .text-container {
   width: 70%;
@@ -203,6 +205,10 @@
 
 .selected {
   border-bottom: 2px solid var(--red);
+}
+
+.not-selected {
+  border-bottom: 2px solid transparent;
 }
 
 .triangle {
@@ -297,12 +303,20 @@
   background-position: center;
 }
 
-#new-york-one {
+#ny-one {
   background-image: url("https://i.imgur.com/StkJLnj.jpg");
 }
 
-#new-york-two {
+#ny-two {
   background-image: url("https://i.imgur.com/bI5UyMn.jpg");
+}
+
+#la-one {
+  background-image: url("https://i.imgur.com/tju1F37.jpg");
+}
+
+#la-two {
+  background-image: url("https://i.imgur.com/tju1F37.jpg");
 }
 
 .restaurant-text {
@@ -310,12 +324,19 @@
   grid-template-columns: 50% 50%;
   width: 75%;
   align-self: center;
+  /* height: 500px; */
 }
 
 .restaurant-text h2 {
   grid-column-start: 1;
   grid-column-end: 3;
   justify-self: center;
+}
+
+.restaurant-text p {
+  margin: 0;
+  font-family: "Open sans", sans-serif;
+  font-size: 14px;
 }
 
 .contact-info {
@@ -344,6 +365,11 @@
 
 #press-description p {
   margin: 0;
+}
+
+#press-description a {
+  color: var(--red);
+  text-decoration: none;
 }
 
 .footer {
