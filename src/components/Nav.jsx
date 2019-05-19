@@ -14,6 +14,7 @@ const Nav = (props) => {
         <div className="button" id="nav-book" onClick={props.scrollBook}>BOOK</div>
       </div>
       <HamburgerMenu {...props}/>
+      <img id="mobile-img" onClick={props.scrollHeader}  src="https://s3.amazonaws.com/image-urls/images/sushizo-1.png" alt="" />
     </div>
   )
 }

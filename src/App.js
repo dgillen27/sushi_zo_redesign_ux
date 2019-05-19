@@ -4,7 +4,8 @@ import Header from './components/Header'
 import Nav from './components/Nav';
 import Body from './components/Body';
 import Footer from './components/Footer';
-import Backdrop from './components/Backdrop'
+import Backdrop from './components/Backdrop';
+import OpenMenu from './components/OpenMenu';
 
 class App extends Component {
   constructor() {
@@ -25,6 +26,7 @@ class App extends Component {
     this.scrollPress = this.scrollPress.bind(this);
     this.scrollHeader = this.scrollHeader.bind(this);
     this.selectCity = this.selectCity.bind(this);
+    this.changeClass = this.changeClass.bind(this);
 
 
     this.state = {
@@ -61,8 +63,11 @@ class App extends Component {
     this.header.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
 
-  changeClass(ev) {
-    ev.prevenetDefault();
+  changeClass() {
+    const { showClass } = this.state;
+    this.setState({
+      showClass: showClass === true? false: true
+    })
   }
 
   selectCity(value) {
@@ -81,8 +86,17 @@ class App extends Component {
           scrollContact={this.scrollContact}
           scrollLocations={this.scrollLocations}
           scrollPress={this.scrollPress}
-          scrollHeader={this.scrollHeader}/>
+          scrollHeader={this.scrollHeader}
+          changeClass={this.changeClass}/>
         {/*<Backdrop />*/}
+        { this.state.showClass && <OpenMenu
+          scrollOmakase={this.scrollOmakase}
+          scrollAbout={this.scrollAbout}
+          scrollContact={this.scrollContact}
+          scrollLocations={this.scrollLocations}
+          scrollPress={this.scrollPress}
+          scrollHeader={this.scrollHeader}
+          changeClass={this.changeClass}/>}
         <Body
           currentCity={this.state.currentCity}
           omakase={this.omakase}
