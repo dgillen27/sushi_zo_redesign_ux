@@ -54,7 +54,27 @@ const Body = (props) => {
               <br/>
               <p>2013</p>
               <p>Los Angeles Times</p>
-              <p>Saturday Section Front Times</p>
+              <p>Saturday Section Front Page</p>
+              <br/>
+              <p>Los Angeles Magazine</p>
+              <p>Top 15 Sushi Restaurants</p>
+              <br/>
+              <p>2012</p>
+              <p>LA Weekly</p>
+              <p>Top 10 Los Angeles Sushi Restaurants</p>
+              <br/>
+              <p>2011</p>
+              <p>Zagat Survey</p>
+              <p>Los Angeles/SO.California Restaurants</p>
+              <br/>
+              <p>29 Point Food Rating (30 Possible Points)</p>
+              <br/>
+              <p>2010</p>
+              <p>New Zagat Guide Picks LA's Best Eateries</p>
+              <br/>
+              <p>2009</p>
+              <p>Michelin Guide</p>
+              <p>Michelin Star Rating</p>
             </div>
           </div>
           <div className="image" id="press-image"></div>
