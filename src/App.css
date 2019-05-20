@@ -76,11 +76,11 @@
 
 .line {
   min-width: 39px;
-  width: 100%;
+  width: 39px;
   height: 2px;
   background: white;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
 }
 
 #mobile-img {
@@ -155,11 +155,11 @@
 
 @keyframes menu-opening {
   0% {
-    left: -100vw;
+    right: -100vw;
   }
 
   100% {
-    left: 0;
+    right: 0;
   }
 }
 

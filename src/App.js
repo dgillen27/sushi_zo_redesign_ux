@@ -87,7 +87,8 @@ class App extends Component {
           scrollLocations={this.scrollLocations}
           scrollPress={this.scrollPress}
           scrollHeader={this.scrollHeader}
-          changeClass={this.changeClass}/>
+          changeClass={this.changeClass}
+          showClass={this.state.showClass}/>
         {/*<Backdrop />*/}
         { this.state.showClass && <OpenMenu
           scrollOmakase={this.scrollOmakase}
