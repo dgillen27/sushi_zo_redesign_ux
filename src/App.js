@@ -36,15 +36,15 @@ class App extends Component {
   }
 
   scrollOmakase() {
-    this.omakase.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    this.omakase.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   scrollAbout() {
-    this.about.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    this.about.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   scrollContact() {
-    this.contact.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    this.contact.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   scrollLocations() {
@@ -52,11 +52,11 @@ class App extends Component {
   }
 
   scrollPress() {
-    this.press.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    this.press.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   scrollBook() {
-    this.locations.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    this.locations.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   scrollHeader() {
